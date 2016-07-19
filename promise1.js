@@ -47,4 +47,4 @@ promise.then(writeFile)
 			.then(readFile)
 			.catch(function(error){
 				console.log("抛出异常："+ error);
-			})
+			});
