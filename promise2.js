@@ -48,16 +48,17 @@ var reqInfo = {
 	promise.all 
 	用户发布的帖子和用户学习帖子同时并行请求 
 */
-// reqInfo.promiseAll().then(function(value){
-// 	console.log("用户学习过的帖子：\n");
-// 	console.log(value[0]);
-// 	console.log("用户发布的帖子：\n");
-// 	console.log(value[1]);
-// },function(error){
-// 	console.log(error);
-// }).catch(function(error){
-// 	conosle.log(error);
-// })
+reqInfo.promiseAll().then(function(value){
+	console.log("\n\n\n\npromise.all：\n");
+	console.log("用户学习过的帖子：\n");
+	console.log(value[0]);
+	console.log("\n用户发布的帖子：\n");
+	console.log(value[1]);
+},function(error){
+	console.log(error);
+}).catch(function(error){
+	conosle.log(error);
+})
 
 
 /**
@@ -65,6 +66,7 @@ var reqInfo = {
 	用户发布的帖子和用户学习帖子同时并行请求 
 */
 reqInfo.promiseRace().then(function(value){
+	console.log("\n\n\n\npromise.race：\n");
 	console.log("请求快的先显示：");
 	console.log(value);
 },function(error){
