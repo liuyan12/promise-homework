@@ -1,3 +1,4 @@
+/********************** 作业一 *************************/ 
 var fs = require('fs');
 
 function writeFile(){
@@ -7,9 +8,9 @@ function writeFile(){
 			if(err){
 				reject(new Error(err));
 				return;
-			}
-
-			resolve();
+			}else{
+				resolve();
+			}			
 		});
 	})
 }
@@ -20,9 +21,9 @@ function appendFile(){
 			if(err){
 				reject(new Error(err));
 				return;
+			}else{
+				resolve();
 			}
-
-			resolve();
 		})
 	});
 }

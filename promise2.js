@@ -1,9 +1,7 @@
+/********************** 作业二 *************************/ 
 var request = require('request');
 
-function requestFun(URL,id){
-	var userId = id || "";
-	var URL = URL + userId;
-
+function requestFun(URL){
 	return new Promise(function (resolve, reject){
 		request(URL,function(error, response, data){
 			if (!error && response.statusCode == 200) {
@@ -40,7 +38,7 @@ var reqInfo = {
     reqTimeout : function(){
     	return new Promise(function(resolve,reject){
     		setTimeout(function(){
-    			resolve("请求超时");
+    			resolve("您的请求超时了~~~~~~~~~~~~~~~~");
     		},200);
     	})
     }
